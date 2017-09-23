@@ -18,7 +18,7 @@
       cm.off("refresh", drawRulers)
     }
     if (val && val.length) {
-      cm.state.rulerDiv = cm.display.lineSpace.parentElement.insertBefore(document.createElement("div"), cm.display.lineSpace)
+      cm.state.rulerDiv = cm.display.lineSpace.insertBefore(document.createElement("div"), cm.display.lineSpace.firstChild)
       cm.state.rulerDiv.className = "CodeMirror-rulers"
       drawRulers(cm)
       cm.on("refresh", drawRulers)
